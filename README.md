@@ -1,2 +1,3 @@
 # FAST-NU-Time-Table-using-Graph-theory
 A time table generator for university of FAST in which the inputs are the courses for respective semesters, the rooms, sections and timeslots. The output is the excel file for every day in a week.
+After the inputs are given, 2 bipartite graphs are made between rooms and timeslots, and sections and courses. Then using the relationships in these two graphs, one more bipartite graphs is made between rooms-timeslots and sections-courses. Then using principles of maximum matching in bipartite graph, rooms-timeslots are paired with their respective sections-courses. To prevent the matching of same section-course to another room in same timeslot, the nodes of matched section-course are deleted so they are never matched in same day again.
